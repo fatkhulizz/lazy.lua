@@ -49,31 +49,4 @@ return {
       })
     end,
   },
-
-  {
-    "neovim/nvim-lspconfig",
-    opts = {
-      servers = {
-        clangd = {
-          cmd = {
-            "clangd",
-            "--background-index",
-            "--clang-tidy",
-            "--header-insertion=iwyu",
-            "--completion-style=detailed",
-            "--function-arg-placeholders",
-            "--fallback-style=llvm",
-
-            "--query-driver=/usr/bin/arm-none-eabi-gcc", -- for embedded c
-            "--log=verbose",
-          },
-        },
-      },
-      setup = {
-        clangd = function(_, opts)
-          opts.capabilities.offsetEncoding = { "utf-16" }
-        end,
-      },
-    },
-  },
 }
