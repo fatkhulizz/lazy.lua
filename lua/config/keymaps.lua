@@ -39,3 +39,7 @@ vim.keymap.set("n", "<Esc>", ":noh <CR>")
 
 -- remove Q
 vim.keymap.set("n", "Q", "<nop>")
+
+-- disable this to use it on oil
+vim.keymap.del("n", "H")
+vim.keymap.del("n", "L")
