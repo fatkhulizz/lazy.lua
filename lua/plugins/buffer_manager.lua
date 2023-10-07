@@ -30,7 +30,7 @@ return {
         end, opts)
       end
       -- Just the menu
-      map({ "t", "n" }, "<Tab>", bmui.toggle_quick_menu, opts)
+      map({ "t", "n" }, "<Tab>", bmui.toggle_quick_menu, { desc = "open buffer manager" })
       -- Open menu and search
       map({ "t", "n" }, "<M-m>", function()
         bmui.toggle_quick_menu()
@@ -38,7 +38,7 @@ return {
         vim.defer_fn(function()
           vim.fn.feedkeys("/")
         end, 50)
-      end, opts)
+      end, { desc = "open buffer manager and search" })
       -- Next/Prev
       map("n", "<M-j>", bmui.nav_next, opts)
       map("n", "<M-k>", bmui.nav_prev, opts)

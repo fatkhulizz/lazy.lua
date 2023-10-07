@@ -1,4 +1,4 @@
 return {
   "tpope/vim-fugitive",
-  vim.keymap.set("n", "<leader>gS", vim.cmd.Git),
+  vim.keymap.set("n", "<leader>gS", vim.cmd.Git, { desc = "git status" }),
 }
