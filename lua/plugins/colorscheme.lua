@@ -33,7 +33,10 @@ return {
         flash = true,
         gitsigns = true,
         illuminate = true,
-        indent_blankline = { enabled = true },
+        indent_blankline = {
+          enabled = true,
+          scope_color = "green",
+        },
         lsp_trouble = true,
         mason = true,
         mini = true,
