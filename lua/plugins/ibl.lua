@@ -7,7 +7,7 @@ return {
   event = "LazyFile",
   opts = {
     indent = {
-      char = "│",
+      char = "▏",
       tab_char = "│",
     },
     scope = { enabled = true, show_start = true },
