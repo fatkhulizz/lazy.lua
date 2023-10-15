@@ -32,7 +32,7 @@ return {
     -- Optional dependencies
     dependencies = { "nvim-tree/nvim-web-devicons" },
   },
-  { vim.keymap.set("n", "-", "<CMD>Oil<CR>", { desc = "Open parent dir" }) },
+  -- { vim.keymap.set("n", "-", "<CMD>Oil<CR>", { desc = "Open parent dir" }) },
   { vim.keymap.set("n", "<leader>e", "<CMD>Oil<CR>", { desc = "Open parent dir" }) },
   { vim.keymap.set("n", "<leader>E", "<CMD>Oil .<CR>", { desc = "Open root dir" }) },
 }
