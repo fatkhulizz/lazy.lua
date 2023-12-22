@@ -4,10 +4,6 @@
 
 local opt = vim.opt
 
-opt.tabstop = 4
-opt.shiftwidth = 4
-opt.softtabstop = 4
-
 opt.scrolloff = 8
 
 vim.o.winbar = "%{%v:lua.require'nvim-navic'.get_location()%} %= %f"
