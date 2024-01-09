@@ -69,7 +69,28 @@ return {
       },
     },
   },
-  { "sainnhe/everforest" },
+
+  {
+    "sainnhe/everforest",
+    lazy = true,
+  },
+
+  {
+    "folke/tokyonight.nvim",
+    lazy = true,
+    opts = {
+      style = "night",
+      transparent = true,
+    },
+  },
+
+  -- fix notify on transparent
+  {
+    "rcarriga/nvim-notify",
+    opts = {
+      background_colour = "#000000",
+    },
+  },
 
   {
     "LazyVim/LazyVim",

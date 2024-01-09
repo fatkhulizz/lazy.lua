@@ -11,7 +11,9 @@ vim.o.winbar = "%{%v:lua.require'nvim-navic'.get_location()%} %= %f"
 opt.clipboard = "" -- keep your clipboard off, sir
 
 vim.g.everforest_background = "hard"
-vim.g.everforest_colors_override = {
-  bg0 = { "#000000", "000" },
-  bg2 = { "#1E2326", "235" },
-}
+-- vim.g.everforest_colors_override = {
+--   bg0 = { "#000000", "000" },
+--   bg2 = { "#1E2326", "235" },
+-- }
+
+vim.g.everforest_transparent_background = 2
