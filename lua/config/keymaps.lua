@@ -4,13 +4,6 @@
 
 -- [[Useful/hack Keymaps]]
 
--- Remap for dealing with word wrap
-vim.keymap.set("n", "k", "v:count == 0 ? 'gk' : 'k'", { expr = true, silent = true })
-vim.keymap.set("n", "j", "v:count == 0 ? 'gj' : 'j'", { expr = true, silent = true })
-
--- set ; as :
-vim.keymap.set("n", ";", ":")
-
 -- keep cursor in center
 vim.keymap.set("n", "J", "mzJ'z")
 vim.keymap.set("n", "<C-d>", "<C-d>zz")
@@ -34,12 +27,24 @@ vim.keymap.set("i", "<C-l>", "<Right>")
 vim.keymap.set("i", "<C-j>", "<Down>")
 vim.keymap.set("i", "<C-k>", "<Up>")
 
--- assign esc to clear highlight
-vim.keymap.set("n", "<Esc>", ":noh <CR>")
-
 -- remove Q
 vim.keymap.set("n", "Q", "<nop>")
 
--- disable this to use it on oil
-vim.keymap.del("n", "H")
-vim.keymap.del("n", "L")
+local del = vim.keymap.del
+-- remove buffer related
+del("n", "<S-h>")
+del("n", "<S-l>")
+del("n", "[b")
+del("n", "]b")
+del("n", "<leader>bb")
+del("n", "<leader>`")
+-- remove lazygit
+del("n", "<leader>gg")
+del("n", "<leader>gG")
+-- remove tab related
+del("n", "<leader><tab>l")
+del("n", "<leader><tab>f")
+del("n", "<leader><tab><tab>")
+del("n", "<leader><tab>]")
+del("n", "<leader><tab>d")
+del("n", "<leader><tab>[")
