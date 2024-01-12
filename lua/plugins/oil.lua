@@ -11,7 +11,7 @@ return {
       keymaps = {
         ["g?"] = "actions.show_help",
         ["<CR>"] = "actions.select",
-        ["L"] = "actions.select",
+        ["<A-l>"] = "actions.select",
         ["<C-s>"] = "actions.select_vsplit",
         ["<C-h>"] = "actions.select_split",
         ["<C-t>"] = "actions.select_tab",
@@ -20,7 +20,7 @@ return {
         ["q"] = "actions.close",
         ["<C-l>"] = "actions.refresh",
         ["-"] = "actions.parent",
-        ["H"] = "actions.parent",
+        ["<A-h>"] = "actions.parent",
         ["_"] = "actions.open_cwd",
         ["`"] = "actions.cd",
         ["~"] = "actions.tcd",
@@ -32,7 +32,9 @@ return {
     -- Optional dependencies
     dependencies = { "nvim-tree/nvim-web-devicons" },
   },
-  -- { vim.keymap.set("n", "-", "<CMD>Oil<CR>", { desc = "Open parent dir" }) },
-  { vim.keymap.set("n", "<leader>e", "<CMD>Oil<CR>", { desc = "Open parent dir" }) },
-  { vim.keymap.set("n", "<leader>E", "<CMD>Oil .<CR>", { desc = "Open root dir" }) },
+  {
+    vim.keymap.set("n", "<leader>e", "<CMD>Oil<CR>", { desc = "Open parent dir" }),
+    vim.keymap.set("n", "<A-h>", "<CMD>Oil<CR>", { desc = "Open parent dir", noremap = true }),
+    vim.keymap.set("n", "<leader>h", "<CMD>Oil .<CR>", { desc = "Open root dir" }),
+  },
 }
