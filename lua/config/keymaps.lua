@@ -39,7 +39,6 @@ del("n", "]b")
 del("n", "<leader>bb")
 del("n", "<leader>`")
 -- remove lazygit
-del("n", "<leader>gg")
 del("n", "<leader>gG")
 -- remove tab related
 del("n", "<leader><tab>l")

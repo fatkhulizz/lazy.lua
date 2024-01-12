@@ -1,4 +1,9 @@
 return {
   "tpope/vim-fugitive",
-  vim.keymap.set("n", "<leader>gS", vim.cmd.Git, { desc = "git status" }),
+  lazy = true,
+  cmd = "Git",
+  keys = {
+    { "<leader>gg", "<CMD>Git<CR>", desc = "Git status" },
+    { "<leader>gc", "<CMD>Git commit<CR>", desc = "Git commit" },
+  },
 }
