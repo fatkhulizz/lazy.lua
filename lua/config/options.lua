@@ -6,9 +6,9 @@ local opt = vim.opt
 
 opt.scrolloff = 8
 
-vim.o.winbar = "%{%v:lua.require'nvim-navic'.get_location()%} %= %f"
+-- vim.o.winbar = "%{%v:lua.require'nvim-navic'.get_location()%} %= %f"
 
-opt.clipboard = "" -- keep your clipboard off, sir
+opt.clipboard = "unnamed"
 
 vim.g.everforest_background = "hard"
 -- vim.g.everforest_colors_override = {
